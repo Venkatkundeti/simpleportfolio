@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Venkat Sai - Profile Card</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="card">
+    <img src="venkat.png" alt="Venkat Sai" class="avatar" />
+    <h2>Venkat Sai</h2>
+    <p class="role">Full Stack Developer</p>
+    <p class="email">venkatkundeti12@gmail.com</p>
+
+    <button id="toggleBtn">Show More</button>
+
+    <div class="more-info" id="moreInfo">
+      <p>📍 Eluru, Andhra Pradesh</p>
+      <p>💼 Skills: HTML, CSS, JavaScript, Python, Java</p>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('toggleBtn');
+    const info = document.getElementById('moreInfo');
+    let expanded = false;
+
+    btn.addEventListener('click', () => {
+      expanded = !expanded;
+      info.style.display = expanded ? 'block' : 'none';
+      btn.textContent = expanded ? 'Show Less' : 'Show More';
+    });
+  </script>
+</body>
+</html>
